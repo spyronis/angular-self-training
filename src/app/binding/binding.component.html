@@ -1,0 +1,23 @@
+<div class="binding-component">
+
+  <p>Binding initial name : {{name}}</p>
+  <button (click) = "clickToChangeName()">Click to change name on binding name</button>
+  <br/>
+
+  <p>Binding surname : {{surname}}</p>
+  <label>Enter surname:</label>
+  <input (keyup) = "onKeyUpChangeSurname($event)"/>
+  
+  <br/>
+
+  <h1> Showing users..</h1>
+  <button (click) = "clickToMakeCompact()">Compact view</button>&nbsp;
+  <button (click) = "clickToFullView()">Full view</button>
+
+  <ul>
+    <li *ngFor="let user of users" >
+      <app-user [showView]="showFull" [user]="user" ></app-user>
+    </li>
+  </ul>
+
+</div>

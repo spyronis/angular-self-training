@@ -1,0 +1,11 @@
+<div class="user-component" appTest>
+    <p>User name: {{user.name}}</p>
+    <div>Media name : {{user.nameI}}</div>
+      <br>
+      <div *ngIf="showView">
+        <div>Media description : {{user.description}}</div>
+        <br>
+        <img src={{user.url}} alt="alt" height="300" width="auto">
+      </div>
+</div>
+

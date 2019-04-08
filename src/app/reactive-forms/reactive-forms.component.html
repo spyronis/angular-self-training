@@ -1,0 +1,13 @@
+<h1>REACTIVE FORMS !!</h1>
+<form [formGroup]="loginForm" (submit)="login()">
+  <label>Username</label>
+  <input type="text" formControlName="username"/>
+  <br>
+
+  <label>Address</label>
+  <input type="text" formControlName="address"/>
+  <br>
+
+  <button type="submit">Login</button>
+  
+</form>
