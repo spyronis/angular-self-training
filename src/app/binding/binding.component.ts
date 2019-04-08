@@ -20,8 +20,8 @@ export class BindingComponent implements OnInit {
   'https://www.arhs-group.com/wp-content/uploads/2016/07/All-about-us1.jpg',
   'all about us media', 'lorem ipsum 2'),
 
-  new User('Takis Sep', 
-  'https://www.arhs-group.com/wp-content/uploads/2016/09/Expertise.jpg', 
+  new User('Takis Sep',
+  'https://www.arhs-group.com/wp-content/uploads/2016/09/Expertise.jpg',
   'expertise media', 'lorem ipsum 3')];
 
   @Input() showFull = true;
