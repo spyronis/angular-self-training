@@ -1,4 +1,4 @@
-import {  FormGroup, FormControl } from '@angular/forms';
+import {  FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,19 +9,23 @@ import { Component, OnInit } from '@angular/core';
 export class ReactiveFormsComponent implements OnInit {
 
   loginForm: FormGroup;
+  isUserConsenting: false;
+
   constructor() {
     this.loginForm = new FormGroup({
-      username: new FormControl(''),
-      address: new FormControl(''),
+      username: new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(5)]),
+      address: new FormControl('', [Validators.required]),
+      consent: new FormControl('', [Validators.requiredTrue])
     });
   }
 
   login() {
     console.log('Username is ' + this.loginForm.value.username);
     console.log('Address is ' + this.loginForm.value.address);
+    console.log('Consent is ' + this.loginForm.value.consent);
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
+
 
 }
